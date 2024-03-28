@@ -6,14 +6,6 @@ struct ContentView: View {
 
     var body: some View {
         VStack(spacing: 0) {
-            Text("Xonole")
-                .font(.title)
-                .fontWeight(.bold)
-                .foregroundColor(.white)
-                .padding()
-                .background(Color.black)
-                .padding(.bottom, 5)
-
             ScrollView {
                 Text(output)
                     .foregroundColor(.green)
