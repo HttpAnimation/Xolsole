@@ -9,20 +9,25 @@ struct ContentView: View {
             Text("Xonole")
                 .font(.title)
                 .fontWeight(.bold)
-                .foregroundColor(.black)
+                .foregroundColor(.white)
                 .padding()
-                .background(Color.gray.opacity(0.1))
+                .background(Color.black)
+                .padding(.bottom, 5)
 
             ScrollView {
                 Text(output)
-                    .foregroundColor(.black)
+                    .foregroundColor(.green)
                     .padding()
             }
 
             HStack {
-                TextField("Enter command", text: $command)
-                    .textFieldStyle(PlainTextFieldStyle())
-                    .padding()
+                TextField("Enter command", text: $command, onCommit: {
+                    runCommand()
+                })
+                .textFieldStyle(PlainTextFieldStyle())
+                .foregroundColor(.white)
+                .background(Color.black)
+                .padding()
 
                 Button("Run Command") {
                     runCommand()
@@ -33,6 +38,7 @@ struct ContentView: View {
                 .cornerRadius(5)
                 .padding()
             }
+            .background(Color.black)
         }
     }
 
