@@ -8,6 +8,7 @@ struct ContentView: View {
         VStack(spacing: 0) {
             ScrollView {
                 Text(output)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity) // Fill available space
                     .foregroundColor(.green)
                     .padding()
             }
